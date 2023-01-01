@@ -20,7 +20,8 @@ export default class MenuMobile {
     });
   }
 
-  openMenu() {
+  openMenu(e) {
+    e.preventDefault();
     this.menuButton.classList.add(this.activeClass);
     this.menuLista.classList.add(this.activeClass);
     outsideClick(this.menuLista, this.events, () => {
